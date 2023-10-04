@@ -12,3 +12,20 @@ git 다양한 기능 연습하기
 -'git commit --amend'
 -커밋 수정 후 덮어쓰기
 
+# 원격저장소(깃허브에서 pull request되돌리기-revert)
+-되돌려야하는 PR (merge가 완료된)이 있을 경우
+-깃헙 저장소 > pull request > closed
+-되돌려야하는 RP선택후
+-revert 선택
+-revert를 위한 새로운 PR이 생성됨
+-새로운 PR을 merge하고 나면 기존 PR이 되돌려진 상태로 복귀
+
+## 브랜치 보호하기
+-branch protect rule
+-깃허브 > 저장소 > setting > branch
+->add브랜치 프로텍트룰
+   -branch name patten-(패턴가능 feature*=> 모든 feature브랜치)
+                      -일반적으로 main브랜치를 보호
+-request a pull request before merging
+    -반드시 병합하기 위해서는 PR이 필요
+    -일반적인 커밋 n 푸쉬를 통한 병합은 원격저장소에서 block                  
